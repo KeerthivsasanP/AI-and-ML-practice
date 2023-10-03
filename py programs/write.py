@@ -1,0 +1,6 @@
+f1 = open("sample.txt",'w',encoding='utf-8')
+f1.write("Monitor\n")
+f1.write("Keyboard")
+f1 = open("sample.txt",'r')
+print(f1.readline(),end="")
+print(f1.read())
