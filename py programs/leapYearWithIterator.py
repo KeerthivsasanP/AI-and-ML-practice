@@ -11,26 +11,9 @@ class year:
                     if self.start%4 != 0 or (self.start%100 == 0 and self.start%400 !=0):
                         self.start += 1
                     else:
-                        break
-                    
-                if self.start%4==0:
-                    if self.start%100 ==0:
-                        if self.start%400 == 0:
-                            value = self.start
-                            self.start+=4
-                            return value
-                        else:
-                            self.start+=1
-                    else:
                         value = self.start
-                        self.start+=4
+                        self.start += 4
                         return value
-                else:
-                    value = self.start
-                    self.start+=4
-                    return value
-
-
         else:
             raise StopIteration
 y = year(2009,2415)
