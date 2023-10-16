@@ -16,7 +16,12 @@ class year:
                         return value
         else:
             raise StopIteration
-y = year(2009,2415)
+start = int(input("Enter the starting year \n"))
+end = int(input("Enter the ending year \n"))
+y = year(start,end)
 yiter = iter(y)
-for i in y:
-    print(i)
+if(start<end):
+    print(f"The leap year(s) between {start} and {end} is(are)\n")
+    for i in y:
+        print(i)
+
