@@ -29,4 +29,8 @@ if blanks_count > 0:
     print("HANGMAN")
 if hangman_count > 0:
     print("YOU WIN")
+<<<<<<< HEAD
         
+=======
+        
+>>>>>>> 80598e4354e6f32a0fc2efdcf99f7bd931419f9c
