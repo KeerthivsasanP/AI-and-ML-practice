@@ -51,7 +51,9 @@ elif choice == "coffee":
                     isContinue = input("Do you want to continue?(y/n)")
                     if isContinue != 'y':
                         isContinue = False
-            else:
-                Print("Out of stock")
+                else:
+                    print("Out of stock")
+                    print(f"Collect your amount {input_rupee} rupee and {input_paise} paise")
+                    break
 print(f"Availability \nwater = {iwater}\npowder = {ipowder}\nmilk = {imilk}")
 print(f"Amount {irupee} rupees and {ipaise} paise")
