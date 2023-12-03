@@ -15,3 +15,4 @@ data = {
         "powder":30
         }
     }
+amount= {"rupees":0,"paise":0}
