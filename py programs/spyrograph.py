@@ -2,8 +2,9 @@ import turtle
 import random
 
 t = turtle.Turtle()
-canvas = t.getscreen()
 
+canvas = t.getscreen()
+turtle.title("Spyrograph")
 no_of_circle = int(input("Enter the number of circles"))
 angle = 360/no_of_circle
 t.speed(30)
