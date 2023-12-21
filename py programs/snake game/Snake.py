@@ -1,6 +1,6 @@
 from turtle import Turtle,Screen
 import time
-from random import randint
+
 
 WALL_LENGTH = 600
 INITIAL_LENGTH = 3
@@ -19,12 +19,18 @@ class Snake:
 
     def drawSnake(self):
         for pos in STARTING_POS:
-            snake = Turtle("square")
-            snake.up()
-            snake.color("green")
-            snake.goto(pos)
-            self.segments.append(snake)
+            self.grow(pos)
+            
+    def grow(self,pos):
+        snake = Turtle("square")
+        snake.up()
+        snake.color("green")
+        snake.goto(pos)
+        self.segments.append(snake)
 
+    def add_tail(self):
+        self.grow(self.segments[-1].pos())
+        
     def move(self):
         for seg_num in range(len(self.segments)-1,0,-1):
             newx = self.segments[seg_num-1].xcor()
@@ -65,17 +71,7 @@ class Wall:
             wall.fd(600)
             wall.rt(90)
 
-class Food:
-    def __init__(self):
-        self.createFood()
 
-    def createFood(self):
-        foodx = randint(-280,280)
-        foody = randint(-280,280)
-        food = Turtle("circle")
-        food.color("blue")
-        food.up()
-        food.goto(foodx,foody)
 
 
 
