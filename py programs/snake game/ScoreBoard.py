@@ -9,6 +9,7 @@ class ScoreBoard(Turtle):
         self.color("white")
         self.hideturtle()
         self.updateScore()
+        
 
     def updateScore(self):
         self.write(f"Score : {self.score}",align="center",font=("Courier",12,"bold"))
