@@ -23,3 +23,6 @@ class MyTurtle(Turtle):
     def move_lt(self):
         new_x =  self.xcor() - STEPS
         self.goto(new_x,self.ycor())
+
+    def reset_game(self):
+        self.goto(0,-280)

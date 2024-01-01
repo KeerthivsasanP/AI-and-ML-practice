@@ -10,13 +10,14 @@ class Car_Manager(Turtle):
         self.all_cars = []
 
     def create_car(self):
-        car = Turtle("square")
-        car.shapesize(1,2)
-        car.penup()
-        car.color(random.choice(CAR_COLOR))
-        random_y = random.randint(-230,230)
-        car.goto(400,random_y)
-        self.all_cars.append(car)
+        if random.randint(1,6) == 1:
+            car = Turtle("square")
+            car.shapesize(1,2)
+            car.penup()
+            car.color(random.choice(CAR_COLOR))
+            random_y = random.randint(-230,230)
+            car.goto(400,random_y)
+            self.all_cars.append(car)
 
     def move_car(self):
         time.sleep(0.1)
