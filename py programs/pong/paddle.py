@@ -19,5 +19,4 @@ class Paddle(Turtle):
         new_y = self.ycor()-STEPS
         self.goto(self.xcor(),new_y)
         
-    def reset_pos(self):
-        self.goto(0,0)
+    
