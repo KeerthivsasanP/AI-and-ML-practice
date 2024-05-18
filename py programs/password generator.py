@@ -4,15 +4,11 @@ alphabets = 'abcdefghijklmnopqrstuvwxyz'
 special_char =  '!@#$%^&*()_+,.'
 lowercase = list(alphabets)
 uppercase = list(alphabets.upper())
-<<<<<<< HEAD
+
 total_char = int(input("how many characters do you want to have ? "))
 uppercount = int(input("How many uppercase ? "))
 specialcount= int(input("How many special char ? "))
-=======
-total_char = int(input("how many characters do you want to have ?"))
-uppercount = int(input("How many uppercase ?"))
-specialcount= int(input("How many special char ?"))
->>>>>>> 80598e4354e6f32a0fc2efdcf99f7bd931419f9c
+
 password = ""
 lowercount = total_char-(uppercount+specialcount)
 
