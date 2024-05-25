@@ -3,8 +3,8 @@ from tkinter import messagebox
 import random
 
 WHITE = '#000000'
-alphabets = 'abcdefghijklmnopqrstuvwxyz'
-special_char =  '!@#$%^&*()_+,.'
+alphabets = list('abcdefghijklmnopqrstuvwxyz')
+special_char =  list('!@#$%^&*()_+,.')
 
 #------------ Generate password ------------
 
@@ -15,20 +15,11 @@ def gen_password():
     uppercase_count = random.randint(2,5)
     special_char_count = 12-(lowercase_count+uppercase_count)
 
-    password_list = []
-
-    for _ in range(lowercase_count):
-        random_password = random_password + alphabets[random.randint(0,25)]
-
-    for _ in range(uppercase_count):
-        random_password = random_password + alphabets[random.randint(0,25)].upper()
-                                    
-    special_char_len = len(special_char)
-    for _ in range(special_char_count):
-        random_password = random_password + special_char[random.randint(0,special_char_len - 1)]
-
-    password_list = list(random_password)
-
+    password_lower = [random.choice(alphabets) for _ in range(lowercase_count)]
+    password_upper = [random.choice(alphabets).upper() for _ in range(uppercase_count)]
+    password_special = [random.choice(special_char) for _ in range(special_char_count)]
+    password_list = password_upper+password_lower+password_special
+    
     random.shuffle(password_list)
 
     random_password = ''
